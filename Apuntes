@@ -1,0 +1,55 @@
+var tono = "claro";
+console.log(tono);
+// → RESULTADO = claro
+tono = "oscuro";
+console.log(tono);
+// → RESULTADO = oscuro
+----------------------------------------------------------------------------------------
+var alcuadrado = function(x) {
+  return x * x;
+};
+
+console.log(alcuadrado(12));
+//Respuesta → 144
+
+OPERACION SIMPLE "AL CUADRADO"
+-----------------------------------------------------------------------------------------
+
+var hruido =function(){
+  console.log("HOLA")
+};
+hRuido();
+// MENSAJE = HOLA
+
+var potencia = function(x,y){
+var resultado = 1;
+for(var contador=0;contador<y;contador++)
+  resultado *= x;
+  return resultado;
+};
+console.log(potencia(2,10));
+-----------------------------------------------------------------------------------------
+
+//ALERTAS Y CONFIRMACIONES
+
+prompt("Dime lo que sabes", "Escriba aqui");
+
+-----------------------------------------------------------------------------------------
+//RAIZ CUADRADA DE NUMERO
+var elNumero = Numero(prompt("Ecriba Numero", ""));
+alert("Tú número es la raíz cuadrada de " +
+      elNumero * elNumero);
+
+-----------------------------------------------------------------------------------------
+TAMAÑO DE ACUERDO AL NUMERO
+
+var num = Number(prompt("Dame un número", "0"));
+
+if (num < 10)
+  alert("Chico");
+else if (num < 100)
+  alert("Mediano");
+else
+  alert("Grande");
+  
+-------------------------------------------------------------------------------------------
