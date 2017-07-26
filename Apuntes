@@ -53,3 +53,21 @@ else
   alert("Grande");
   
 -------------------------------------------------------------------------------------------
+
+function imprimeConCerosYEtiqueta(numero, etiqueta) {
+  var numeroString = String(numero);
+  while (numeroString.length < 3)
+    numeroString = "0" + numeroString;
+  console.log(numeroString + " " + etiqueta);
+}
+
+function imprimeInventarioGranja(vacas, pollos, puercos) {
+  imprimeConCerosYEtiqueta(vacas, "Vacas");
+  imprimeConCerosYEtiqueta(pollos, "Pollos");
+  imprimeConCerosYEtiqueta(puercos, "Puercos");
+}
+
+imprimeInventarioGranja(7, 11, 3);
+
+IMPRIMIR NUMERO DE ANIMALES Y NOMBRE
+-------------------------------------------------------------------------------------------
