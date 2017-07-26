@@ -71,3 +71,14 @@ imprimeInventarioGranja(7, 11, 3);
 
 IMPRIMIR NUMERO DE ANIMALES Y NOMBRE
 -------------------------------------------------------------------------------------------
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       :  5566
+};
+document.getElementById("demo").innerHTML =
+person.firstName + " " + person.lastName;
+
+IMPRIMIR NOMBRE Y SEGUNDO NOMBRE DE UNA PERSONA!
+-------------------------------------------------------------------------------------------
