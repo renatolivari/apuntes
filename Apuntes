@@ -82,3 +82,149 @@ person.firstName + " " + person.lastName;
 
 IMPRIMIR NOMBRE Y SEGUNDO NOMBRE DE UNA PERSONA!
 -------------------------------------------------------------------------------------------
+
+
+var dia1 = {
+  prueba: false,
+  eventos: ["trabajo", "toqué un arbol", "pizza", "correr",
+           "televisión"]
+};
+console.log(dia1.prueba);
+// → false
+console.log(dia1.lob);
+// → undefined
+dia1.lob = false;
+console.log(dia1.lob);
+// → false
+
+---------------------------------------------------------------------------------------------
+ELIMINAR ALGUN OPERADOR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+var unObjeto = {izq: 1, der: 2};
+console.log(unObjeto.izq);
+// → 1
+delete unObjeto.izq;
+console.log(unObjeto.izq);
+// → undefined
+console.log("izq" in unObjeto);
+// → false
+console.log("der" in unObjeto);
+// → true
+
+---------------------------------------------------------------------------------------------
+
+COMO REPRESENTAR UN HORARIO 
+
+var diario = [
+  {eventos: ["trabajo", "tocar un arbol", "pizza",
+            "correr", "televisión"],
+   ardilla: false},
+  {eventos: ["trabajo", "helado", "coliflor",
+            "lasagna", "tocar un arbol", "lavarse los dientes"],
+   ardilla: false},
+  {eventos: ["fin de seamana", "bicicleta", "descanso",
+            "cacahuates", "cerveza"],
+   ardilla: true},
+  /* y continúa... */
+];
+
+---------------------------------------------------------------------------------------------
+
+DIFERENCIA DE VARIABLES 
+
+var objeto1 = {valor: 10};
+var objeto2 = objeto1;
+var objeto3 = {valor: 10};
+
+console.log(objeto1 == objeto2);
+// → true
+console.log(objeto1 == objeto3);
+// → false
+
+objeto1.valor = 15;
+console.log(objeto2.valor);
+// → 15
+console.log(objeto3.valor);
+// → 10
+-----------------------------------------------------------------------------------------------
+
+CALCULAR CORRELACIONES 
+
+function phi(tabla) {
+  return (tabla[3] * tabla[0] - tabla[2] * tabla[1]) /
+    Math.sqrt((tabla[2] + tabla[3]) *
+              (tabla[0] + tabla[1]) *
+              (tabla[1] + tabla[3]) *
+              (tabla[0] + tabla[2]));
+}
+
+console.log(phi([76, 9, 4, 1]));
+// → 0.068599434
+-------------------------------------------------------------------------------------------------
+
+OBJETOS COMO MAPAS
+var mapa = {};
+function guardarPhi(evento, phi) {
+  mapa[evento] = phi;
+}
+
+guardarPhi("pizza", 0.069);
+guardarPhi("toque un arbol", -0.081);
+console.log("pizza" in mapa);
+// → true
+console.log(mapa["toque un arbol"]);
+// → -0.081
+----------
+for (var evento in mapa)
+  console.log("La correlación para '" + evento + "' es " + mapa[evento]);
+// → La correlación para 'pizza' is 0.069
+// → La correlación para 'toqué un arbol' es -0.081
+
+--------------------------------------------------------------------------------------------------
+
+console.log("coconuts".slice(4, 7));
+// → nut
+console.log("coconut".indexOf("u"));
+// → 5
+console.log("one two three".indexOf("ee"));
+// → 11
+console.log("  okay \n ".trim());
+// → okay
+---------------------------------------------
+var string = "abc";
+console.log(string.length);
+// → 3
+console.log(string.charAt(0));
+// → a
+console.log(string[1]);
+// → b
+--------------------------------------------------------------------------------------------------
+
+function noArguments() {}
+noArguments(1, 2, 3); // This is okay
+function threeArguments(a, b, c) {}
+threeArguments(); // And so is this
+
+--------------------------------------------------------------------------------------------------
+NUMEROS RANDOM 
+function randomPointOnCircle(radius) {
+  var angle = Math.random() * 2 * Math.PI;
+  return {x: radius * Math.cos(angle),
+          y: radius * Math.sin(angle)};
+}
+console.log(randomPointOnCircle(2));
+-------------------------------------------
+
+console.log(Math.random());
+// → 0.36993729369714856
+console.log(Math.random());
+// → 0.727367032552138
+console.log(Math.random());
+// → 0.40180766698904335
+
+
+console.log(Math.floor(Math.random() * 100));
+
+NUMEROS RANDOM HASTA EL 100
+---------------------------------------------------------------------------------------------------
+
