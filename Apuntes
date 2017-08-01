@@ -228,3 +228,89 @@ console.log(Math.floor(Math.random() * 100));
 NUMEROS RANDOM HASTA EL 100
 ---------------------------------------------------------------------------------------------------
 
+var renato = [];
+renato.push("Renato");
+renato.push("el", "mejor");
+console.log(renato);
+// → ["Renato", "el", "mejor"]
+console.log(renato.join(" "));
+// → Renato el mejor
+console.log(renato.pop());
+// → mejor
+console.log(renato);
+// → ["Renato", "el"]
+
+var mapa = {};
+function guardarPhi(evento, phi) {
+  mapa[evento] = phi;
+}
+
+guardarPhi("EJEMPLO", 0.069);
+guardarPhi("HOLA", -0.081);
+console.log("EJEMPLO" in mapa);
+// → true
+console.log(mapa["HOLA"]);
+// → -0.081
+for (var evento in mapa)
+  console.log("La correlación para '" + evento +
+              "' es " + mapa[evento]);
+
+              var hola = {};
+              hola.hablar = function(linea) {
+                console.log("El maestro dice '" + linea + "'");
+              };
+
+              hola.hablar("Estoy vivo.");
+              // → El conejo dice 'Estoy vivo.'
+
+              function hablar(linea) {
+  console.log("El conejo " + this.tipo + " dice '" + linea + "'");
+}
+var conejoBlanco = {tipo: "blanco", hablar: hablar};
+var conejoGordo = {tipo: "gordo", hablar: hablar};
+
+conejoBlanco.hablar("¡Por mis orejas y los pelos de mi " + "bigote, que tarde se está haciendo!");
+// → El conejo blanco dice '¡Por mis orejas y los pelos'
+//   de mi bigote, que tarde se está haciendo!'
+conejoGordo.hablar("Puedes estar seguro de que me comería" + "una zanahoria.");
+// → El conejo gordo dice 'Puedes estar seguro de que
+//   me comería una zanahoria.'
+hablar.apply(conejoGordo, ["¡Burp!"]);
+// → El conejo gordo dice '¡Burp!'
+hablar.call({tipo: "viejo"}, "¡Oh!, ¡Ah!");
+// → El conejo viejo dice '¡Oh!, ¡Ah!'
+
+
+var vacio = {};
+console.log(vacio.toString);
+// → function toString(){…}
+console.log(vacio.toString());
+// → [object Object]
+
+
+console.log(Object.getPrototypeOf(isNaN) == Function.prototype);
+// → true
+console.log(Object.getPrototypeOf([]) ==  Array.prototype);
+// → true
+
+
+var protoConejo = {
+  hablar: function(linea) {
+    console.log("El conejo " + this.type + " dice '" +
+                linea + "'");
+  }
+};
+var conejoAsesino = Object.create(protoConejo);
+conejoAsesino.type = "asesino";
+conejoAsesino.hablar("SKREEEE!");
+// → El conejo asesino dice 'SKREEEE!'
+
+function Conejo(tipo) {
+  this.tipo = tipo;
+}
+
+var conejoAsesino = new Conejo("asesino");
+var conejoNegro = new Conejo("negro");
+console.log(conejoNegro.tipo);
+// → negro
+------------------------------------------------------------------------------------
