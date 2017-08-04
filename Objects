@@ -1,0 +1,37 @@
+var person = "Renato";  
+var anotherPerson = person; 
+person = "Jorge"; 
+
+console.log(anotherPerson); 
+console.log(person);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var añosGrupo = { 15 : "jovenes", 25: "adultos", 60: "adultomayor"};
+console.log(añosGrupo["15"]);
+
+console.log(añosGrupo["60"]);
+
+console.log(añosGrupo["25"]);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var persona = {name: "Renato"};
+var otraPersona = persona;
+persona.nombre = "Jorge";
+
+console.log(otraPersona.nombre);
+console.log(persona.nombre);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function Persona(primerNombre){
+  this.primerNombre = primerNombre;
+  alert('Personas primer nombre');
+}
+
+var persona1 = new Persona("Renato");
+var persona2 = new Persona("Jorge");
+alert ('persona es ' + persona1.primerNombre);
+alert ('persona es ' + persona2.primerNombre);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
