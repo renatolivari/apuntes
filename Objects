@@ -35,3 +35,26 @@ alert ('persona es ' + persona1.primerNombre);
 alert ('persona es ' + persona2.primerNombre);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function Persona(primerNombre){
+  this.primerNombre = primerNombre;
+  alert('Personas primer nombre');
+}
+
+
+Persona.prototype.diHola = function(){
+  alert ("hola, Soy " + this.primerNombre);
+};
+
+var persona1 = new Persona("Renato");
+var persona2 = new Persona("Jorge");
+var funcionSaludar = persona1.diHola;
+
+persona1.diHola();
+persona2.diHola();
+
+alert ('persona es ' + persona1.primerNombre);
+alert ('persona es ' + persona2.primerNombre);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
